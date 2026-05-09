@@ -1,1 +1,48 @@
 @import "tailwindcss";
+/* 自定义 Markdown 排版优化 */
+/* 让 AI 回复的文本像印刷品一样精美 */
+.markdown-container {
+  color: #111;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* 错落感的核心：增加段落间的距离 */
+.markdown-container p {
+  margin-bottom: 2rem; 
+}
+
+/* 核心：公式块的排版 */
+.markdown-container .katex-display {
+  margin: 3.5rem 0 !important; /* 增加公式上下极其宽裕的间距 */
+  padding: 1.5rem 0;
+  background: transparent; /* 保持纯净感 */
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+/* 行内公式 */
+.markdown-container .katex {
+  font-size: 1.05em;
+  padding: 0 0.2rem;
+}
+
+/* 列表间距 */
+.markdown-container ul, .markdown-container ol {
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.markdown-container li {
+  margin-bottom: 0.8rem;
+}
+
+/* 标题样式 */
+.markdown-container h1, .markdown-container h2, .markdown-container h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: #000;
+}
